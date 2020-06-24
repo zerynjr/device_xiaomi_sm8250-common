@@ -33,8 +33,7 @@ PRODUCT_PACKAGES += \
     OnePlusIconShapeRoundedRectOverlay \
     OnePlusIconShapeSquareOverlay \
     OnePlusIconShapeSquircleOverlay \
-    OnePlusIconShapeTeardropOverlay \
-    OPFrameworkConfigOverlay
+    OnePlusIconShapeTeardropOverlay
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
