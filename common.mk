@@ -172,11 +172,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-qti.xml
 
-# tri-state-key
-PRODUCT_PACKAGES += \
-    KeyHandler \
-    tri-state-key_daemon
-
 # Trust HAL
 PRODUCT_PACKAGES += \
     lineage.trust@1.0-service
