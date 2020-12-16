@@ -312,6 +312,7 @@ system_ext/etc/permissions/com.qti.location.sdk.xml
 system_ext/etc/permissions/com.qualcomm.location.xml
 system_ext/etc/permissions/com.qualcomm.qti.izattools.xml
 system_ext/etc/permissions/izat.xt.srv.xml
+system_ext/etc/permissions/privapp-permissions-com.beyondGnssService.location.xml
 system_ext/etc/permissions/privapp-permissions-com.qualcomm.location.xml
 -system_ext/framework/com.qti.location.sdk.jar
 -system_ext/framework/izat.xt.srv.jar
@@ -342,7 +343,6 @@ system_ext/lib64/vendor.qti.hardware.qccvndhal@1.0.so
 
 # Init scripts
 system_ext/etc/init/init.qti.bt.logger.rc
-system_ext/etc/init/qspmsvc.rc
 
 # Latency
 -system_ext/framework/vendor.qti.hardware.data.latency-V1.0-java.jar
@@ -396,11 +396,20 @@ system_ext/lib/vendor.qti.hardware.iop@2.0.so
 system_ext/lib64/libqti-iopd-client_system.so
 system_ext/lib64/vendor.qti.hardware.iop@2.0.so
 
+# QSPM
+system_ext/bin/qspmsvc
+system_ext/etc/init/qspmsvc.rc
+system_ext/lib/libqspmsvc.so
+system_ext/lib/vendor.qti.qspmhal@1.0.so
+system_ext/lib64/libqspmsvc.so
+system_ext/lib64/vendor.qti.qspmhal@1.0.so
+
 # Telephony
 etc/permissions/privapp-permissions-qti.xml
+etc/sysconfig/qti_whitelist.xml
+system_ext/etc/permissions/privapp-permissions-qti-system-ext.xml
 system_ext/etc/permissions/qti_libpermissions.xml
 system_ext/etc/permissions/qti_permissions.xml
-etc/sysconfig/qti_whitelist.xml
 -system_ext/app/atfwd/atfwd.apk
 -system_ext/app/datastatusnotification/datastatusnotification.apk
 -system_ext/app/embms/embms.apk
@@ -611,29 +620,15 @@ system_ext/lib/vendor.xiaomi.hardware.fingerprintextension@1.0.so
 system_ext/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so
 
 # Misc
--system_ext/app/colorservice/colorservice.apk
--system_ext/app/ConfURIDialer/ConfURIDialer.apk
--system_ext/app/DeviceInfo/DeviceInfo.apk
--system_ext/app/DeviceStatisticsService/DeviceStatisticsService.apk
--system_ext/app/DynamicDDSService/DynamicDDSService.apk
--system_ext/app/QColor/QColor.apk
--system_ext/app/QdcmFF/QdcmFF.apk
--system_ext/app/QTIDiagServices/QTIDiagServices.apk
--system_ext/app/QtiSystemService/QtiSystemService.apk
--system_ext/app/SimContact/SimContact.apk
--system_ext/app/workloadclassifier/workloadclassifier.apk
 system_ext/bin/diag_callback_sample_system
 system_ext/bin/diag_dci_sample_system
 system_ext/bin/dun-server
-system_ext/bin/qspmsvc
 system_ext/bin/rtspclient
 system_ext/bin/rtspserver
 system_ext/bin/test_diag_system
 system_ext/etc/cdma_call_conf.xml
 system_ext/etc/permissions/com.qualcomm.qmapbridge.xml
 system_ext/etc/permissions/lpa.xml
-system_ext/etc/permissions/privapp-permissions-com.beyondGnssService.location.xml
-system_ext/etc/permissions/privapp-permissions-qti-system-ext.xml
 system_ext/etc/public.libraries-qti.txt
 system_ext/etc/spn-conf.xml
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
@@ -656,7 +651,6 @@ system_ext/lib/liboemaids_system.so
 system_ext/lib/libqct_resampler.so
 system_ext/lib/libqmi_cci_system.so
 system_ext/lib/libqmi_encdec_system.so
-system_ext/lib/libqspmsvc.so
 system_ext/lib/libqti-at.so
 system_ext/lib/libqti_workloadclassifiermodel.so
 system_ext/lib/libScenescape.so
@@ -665,7 +659,6 @@ system_ext/lib/libtrigger-handler.so
 system_ext/lib/libupdateprof.qti.so
 system_ext/lib/vendor.qti.diaghal@1.0.so
 system_ext/lib/vendor.qti.hardware.slmadapter@1.0.so
-system_ext/lib/vendor.qti.qspmhal@1.0.so
 system_ext/lib64/libavenhancements.so
 system_ext/lib64/libbinauralrenderer_wrapper.qti.so
 system_ext/lib64/libdashdatasource.so
@@ -691,7 +684,6 @@ system_ext/lib64/liboemaids_system.so
 system_ext/lib64/libqmi_cci_system.so
 system_ext/lib64/libqmi_encdec_system.so
 system_ext/lib64/libQOC.qti.so
-system_ext/lib64/libqspmsvc.so
 system_ext/lib64/libqti-at.so
 system_ext/lib64/libqti_workloadclassifiermodel.so
 system_ext/lib64/libskewknob_system.so
@@ -699,5 +691,3 @@ system_ext/lib64/libtrigger-handler.so
 system_ext/lib64/libupdateprof.qti.so
 system_ext/lib64/vendor.qti.diaghal@1.0.so
 system_ext/lib64/vendor.qti.hardware.slmadapter@1.0.so
-system_ext/lib64/vendor.qti.qspmhal@1.0.so
--system_ext/priv-app/QAS_DVC_MSP/QAS_DVC_MSP.apk
